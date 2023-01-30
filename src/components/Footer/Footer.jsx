@@ -15,7 +15,7 @@ export default function Footer() {
 
   const menuLinks = data?.menu_movies.menu_items.map((item, index) => (
     <Link
-      to={`/movie/category/${item.internal_linkConnection.edges[0].node.url}`}
+      to={item.internal_linkConnection.edges[0].node.url === 'movie' ? '/movie' : `/movie/category/${item.internal_linkConnection.edges[0].node.url}`}
       key={index}
       className={s.link}
     >
