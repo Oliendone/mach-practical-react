@@ -1,0 +1,47 @@
+@import '../../assets/style/styles'
+
+.hero
+  display: flex
+  flex-direction: column
+  position: relative
+  padding-bottom: 40%
+  background-color: #000
+  .content
+    padding: 4rem
+    width: 40%
+    display: flex
+    align-items: center
+    position: absolute
+    height: -webkit-fill-available
+    left: 0
+    top: 0
+    z-index: 3
+  .title
+    margin-bottom: 1rem
+  .meta
+    margin-bottom: 1.3rem
+    display: flex
+    color: $additional_color
+  .rating
+    margin-right: 1rem
+    display: flex
+    align-items: baseline
+  .info
+    span + span
+      margin-left: 0.7rem
+  .backdrop
+    position: absolute
+    right: 0
+    height: 100%
+    z-index: 2
+    &:after
+      position: absolute
+      top: 0
+      right: 0
+      bottom: -1px
+      left: -1px
+      display: block
+      content: ""
+      background-image: linear-gradient(90deg,#000 0,transparent 50%,transparent)
+  .image
+    height: 100%

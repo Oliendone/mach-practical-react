@@ -1,0 +1,113 @@
+@import '../../assets/style/loader'
+@import "../../assets/style/styles"
+
+.movieLanding
+  padding-top: 40px
+  padding-bottom: 60px
+  .nav
+    display: flex
+    justify-content: center
+    margin-top: 2rem
+  .buttonNav
+    display: block
+    width: auto
+    margin: 0 2rem
+    border: none
+    padding: 0
+    font-weight: 500
+    color: #585858
+    text-transform: uppercase
+    letter-spacing: .4px
+    background: none
+    border-bottom: 2px solid $main-color
+    outline: none
+    transition: color .2s
+    &Active
+      border-bottom: 2px solid transparent
+      color: #fff
+      border-bottom-color: #fff
+  .infoSection, .photosSection, .videosSection
+    +container
+    display: flex
+    margin-top: 3rem
+  .infoSection
+    .imageBox
+      width: 25%
+      margin-right: 3rem
+      background-color: $bg-color
+      img
+        width: 100%
+    .title
+      margin-bottom: 0.5rem
+    .desc
+      margin-bottom: 1.5rem
+    .stats
+      margin-top: 2rem
+    .info
+      flex: 1
+    .statsList
+      list-style: none
+      padding: 0
+    .item
+      display: flex
+      padding: 0.3rem 0
+    .label
+      max-width: 110px
+      flex: 1
+    .value
+      flex: 2
+  .videosSection
+    flex-direction: column
+    .header
+      color: $additional-color
+    .title
+      margin: 0.5rem 0 0.25rem
+    .subtitle
+      color: $additional-color
+    .imageBox
+      height: 0
+      padding-bottom: 50%
+      position: relative
+      background-color: $bg-color
+      &.imageWrapper
+        position: absolute
+    .playButton
+      position: absolute
+      +absolute-xy-centered
+      z-index: 99
+    .items
+      display: flex
+      flex-wrap: wrap
+      gap: 15px
+      margin-top: 2rem
+    .item
+      width: 32%
+      padding: 0.2rem
+  .photosSection
+    flex-direction: column
+    .photosWrapper + .photosWrapper
+      margin-top: 3rem
+    .header
+      display: flex
+      align-items: baseline
+      color: $additional-color
+    .subtitle
+      margin-left: 1rem
+    .items
+      display: flex
+      flex-wrap: wrap
+      margin-top: 2rem
+      gap: 15px
+    .item
+      width: 24%
+      &Posters
+        width: 19%
+    .image
+      width: 100%
+      height: 100%
+      object-fit: cover
+.skeleton
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center

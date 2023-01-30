@@ -1,0 +1,41 @@
+@import "variables"
+@import "mixins"
+
+*
+  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif
+  line-height: 1.6rem
+  font-weight: 400
+  margin: 0
+  word-wrap: initial
+
+a
+  text-decoration: none
+  color: $accent-color
+
+.visuallyHidden
+  position: absolute
+  height: 1px
+  width: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  border: 0
+
+.button
+  display: block
+  width: auto
+  border: none
+  padding: 0
+  font-weight: 500
+  color: #fff
+  text-transform: uppercase
+  letter-spacing: .4px
+  background: none
+  outline: none
+  border-bottom: 2px solid #fff
+  transition: all .2s
+  cursor: pointer
+  &:hover
+    color: $additional-color
+    border-bottom-color: $additional-color

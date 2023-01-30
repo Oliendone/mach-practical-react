@@ -1,0 +1,49 @@
+@import '../../assets/style/loader'
+@import '../../assets/style/styles'
+
+.wrapper
+  +container
+  padding-top: 5rem
+  padding-bottom: 5rem
+  .content
+    display: flex
+    flex-direction: column
+  .authorBox
+    display: flex
+    align-items: center
+    .boxImage
+      +flex-centered
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      overflow: hidden
+      margin-right: 1rem
+    .image
+      width: 100%
+    .time
+      margin-left: 1rem
+  .mainInfo
+    display: grid
+    grid-template-columns: 0.8fr 0.2fr
+    padding-top: 1rem
+    gap: 1rem
+  .title
+    margin-bottom: 1.5rem
+  .text
+    color: #fff
+    margin-top: 1rem
+  .image
+    width: 100%
+    height: 100%
+    object-fit: contain
+  .related
+    display: flex
+    flex-direction: column
+    gap: 10px
+  .starRating
+    margin-left: 1rem
+.skeleton
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
