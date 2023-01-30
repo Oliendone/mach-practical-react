@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import { getProperMovieLink } from "../../utils/helpers";
 import { useQuery } from "@apollo/client";
 import { MOVIES_MENU_QUERY } from "../../queries/movies-menu";
 
@@ -16,7 +15,7 @@ export default function Footer() {
 
   const menuLinks = data?.menu_movies.menu_items.map((item, index) => (
     <Link
-      to={getProperMovieLink(item.internal_linkConnection.edges[0].node.url)}
+      to={item.internal_linkConnection.edges[0].node.url}
       key={index}
       className={s.link}
     >

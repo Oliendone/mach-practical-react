@@ -34,33 +34,11 @@ function getProperImageLanguageString(lang) {
   }
 }
 
-function getProperMovieLink(link) {
-  if (link === "movie") {
-    return isAppTypeIsProd
-      ? `/${appRoute}/${link}`
-      : `/${link}`;
-  }
-  return isAppTypeIsProd
-    ? `/${appRoute}/movie/category/${link}`
-    : `/movie/category/${link}`;
-}
-
-function debounce(callback, wait) {
-  let timeout;
-  return (...args) => {
-    const context = this;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => callback.apply(context, args), wait);
-  };
-}
-
 export {
   lowResImagePlacer,
   lowResBackdropPlacer,
   originalImagePlacer,
   getProperDuration,
   youTubeImagePlacer,
-  getProperMovieLink,
   getProperImageLanguageString,
-  debounce,
 };

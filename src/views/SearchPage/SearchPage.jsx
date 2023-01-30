@@ -16,7 +16,6 @@ export default function SearchPage() {
   const [page, setPage] = useState(1);
   const [header, setHeader] = useState("");
   const location = useRef(useLocation().state);
-
   const searchQuery = searchParams.get("q");
   const navigate = useNavigate();
 
