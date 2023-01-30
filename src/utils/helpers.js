@@ -1,5 +1,3 @@
-import { appRoute, isAppTypeIsProd } from "../constants";
-
 function lowResImagePlacer(id) {
   return id ? `https://image.tmdb.org/t/p/w370_and_h556_bestv2${id}` : "";
 }
